@@ -1,0 +1,210 @@
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/****************************
+    RELOJ JAVASCRIPT
+*****************************
+*/
+h1{
+    margin-left: 60px;
+}
+
+.clock{
+    margin: 2px;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(reloj.jpg);
+    background-size: cover;
+
+}
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.clock .hour,
+.clock .minut,
+.clock .seconds{
+        position: absolute;
+    }
+
+.clock .hour, .hr{
+    width: 150px;
+    height: 150px;
+} 
+
+.clock .minut, .min{
+    width: 190px;
+    height: 190px;
+}
+
+.clock .seconds, .sec{
+    width: 230px;
+    height: 230px;
+}
+
+.hr, .min, .sec{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 75px;
+    background: black;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.min::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 90px;
+    background: black;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+
+.sec::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: black;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
+
+/*********************************************
+    RELOJ CSS
+*************************
+*/
+
+.reloj{
+    margin: 2px;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(reloj.jpg);
+    background-size: cover;
+
+}
+
+.reloj::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.reloj .hora,
+.reloj .minutos,
+.reloj .segundos{
+        position: absolute;
+    }
+
+.reloj .hora, .hor{
+    width: 150px;
+    height: 150px;
+    animation: gira 43200s linear infinite;
+} 
+
+.reloj .minutos, .minu{
+    width: 190px;
+    height: 190px;
+    animation: gira 3600s linear infinite;
+}
+
+.reloj .segundos, .seg{
+    width: 230px;
+    height: 230px;
+    animation: gira 60s steps(60) infinite;
+}
+
+.hor, .minu, .seg{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    
+}
+
+.hor::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 75px;
+    background: black;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+    
+}
+
+.minu::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 90px;
+    background: black;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+    
+}
+
+.seg::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: black;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+   
+    
+}
+
+@keyframes gira {
+    from { transform: rotate(0deg);
+    }
+    to { transform: rotate(180deg);
+    }
+}
+
+/*****************************************************************
+    ESTILO DE LA CARD
+    *****************
+*/
+
+.card{
+    margin: 2px;
+    width: 450px;
+    height: 600px;
+    border-radius: 25px;
+    background-image: url(planeta.jpg);
+    background-size: cover;
+    box-shadow: 3px 5px 5px rgba(3, 32, 51, .8);
+}
